@@ -1,0 +1,124 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>OpenSprings</title>
+</head>
+<body>
+<table style="width: 100%; text-align: left; margin-left: auto; margin-right: auto;" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<!-- 1st black box on left -->
+<td style="background-color: rgb(0, 0, 0);"><img src="../../../Documentation/null.gif"width="24"></td>
+<!-- 1st gray box on left -->
+      <td style="background-color: rgb(200, 200, 208);"><img src="../../../Documentation/null.gif" width="24" border="0"></td>
+<!-- main background -->
+    <td style="background-color: rgb(143, 147, 153);">
+      <table border="0" cellpadding="0" cellspacing="9" style="background-color: rgb(143, 147, 153); height: 1px;">
+				<tbody>
+				<td colspan="1">
+				
+				     <!-- Top Box w Logo -->
+            <table border="0" cellspacing="0" cellpadding="0" bgcolor="#000000" width="100%">
+              <td align="center">
+                <table border="0" cellspacing="1" cellpadding="4" style="height: 93px; width: 100%;">
+                   <td style="text-align: center; width: 100%; background-color: rgb(238, 238, 238);"> <a href="http://www.opensprings.org"><img src="../../../Documentation/opensprings.gif" alt="Opensprings.org" border="0"></a></td>
+								</table>
+							</td>
+            </table>
+
+						<!-- Main Box -->
+          <tr>
+            <td colspan="1">
+            <table bgcolor="#000000" cellspacing="0" cellpadding="0" border="0" style="width: 100%; height: 1px;">
+                <tr>
+                  <td>
+                  <table style="height: 86px; width: 100%;" cellspacing="1" cellpadding="8" border="0">
+                        <td colspan="1" style="background-color: rgb(238, 238, 238); width: 100%; text-align: justify;">
+
+												
+												<!-- Main Text Goes Here -->
+												<font face="tahoma"><small>
+												
+												<P ALIGN=LEFT STYLE="margin-bottom: 0in"><b>Open Modules &ndash; version
+0.1 &ndash; Demo Release</b></P>
+<font size="1"><P ALIGN=LEFT STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0in">Copyright (C) 2003 Hotsprings Inc.
+<br>Distributed under the GPL 
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0in">Location: www.Opensprings.org  <BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0in">Requirements:
+<ol>
+
+	<LI>Must show current
+	folder
+	<LI><P STYLE="margin-bottom: 0.04in"><FONT SIZE=2>Must be able to
+	jump to any of the parent folders + up button</FONT></P>
+	<LI><P STYLE="margin-bottom: 0.04in"><FONT SIZE=2>Must have most
+	recent used folders + back,forward buttons</FONT></P>
+	<LI><P STYLE="margin-bottom: 0.04in"><FONT SIZE=2>Must have favorite
+	folders + add to favorites</FONT></P>
+	<LI><P STYLE="margin-bottom: 0.04in"><FONT SIZE=2>Must show content
+	of current folder + view as selection </FONT>
+	</P>
+	<LI><P STYLE="margin-bottom: 0.04in"><FONT SIZE=2>Must be able to
+	type the filename</FONT></P>
+	<LI><P STYLE="margin-bottom: 0.04in"><FONT SIZE=2>Must be able to
+	type the full pathname</FONT></P>
+	<LI><P STYLE="margin-bottom: 0.04in"><FONT SIZE=2>Must be able to
+	type the search pattern </FONT>
+	</P>
+	<LI><P STYLE="margin-bottom: 0.04in"><FONT SIZE=2>Must show the deep
+	search result with full path</FONT></P>
+	<LI><P STYLE="margin-bottom: 0.04in"><FONT SIZE=2>Must be able to
+	execute (ask the system to open) file</FONT></P>
+</ol>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0in">Description:</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0in">class FileDialogStorage is the persistent storage for the data dialog.</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0in">To instantiate a FileFindDialog you need an instance of this class as a parameter. The dialog will use this storage space for its public member data. When a dialog closes the instance of this class can be held alive if you hold another reference to it. Next time you open the dialog you can use this same (Saved) instance of the storage and therefore make the dialog resume from the place it last closed. This way you can easily keep track of all the visited folders (history), the typed in filters, search patterns and so on. Additionally you can initialize this object before the first use of the dialog to make it act as if it already knows some "favorite places".  </P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0in">class FileFindDialog is the main functional object in this file. It is derived of a dialog window. It uses the FileDialogStorage described above to store it's persistent data. Also it uses 2 lists (the back and forward history) which we decided not to make persistent. This class is a good example for how to use a couple of controls together to implement a more complex state machine with various components having direct user control. The "DoLayout" method overrides the virtual in dialog window and allows the dialog to reposition/resize it's component views when resized.The "PopulateDialog" method is used to create and initialize the views associated with this dialog.The "PopulateFields" adds to each view the appropriate data to render.The "RepopulateContent" has the same purpose as "PopulateFields" but only deals with those views that may change their content during the operation of the dialog. For example the "folderContent" list is repopulated every time the user enters a new folder."DialogEventBack" is called when the user pushes the "back" button. If the back history list is not empty the function goes to the previous folder in the history list."DialogEventForward" called when the user pushed the "forward button", otherwise identical to the "back" function.DialogEventUpFolder is called when the user wants to go to the parent directory.If there is such a parent folder the function will go there and remember the current folder in the back history list.DialogEventSelection is a callback function called every time the user clicks on one of the files/folders listed in the content. If it is a folder we use that event to dive into it. If it is a file we simply launch that file using the OS.DialogEventFolder is a callback function called every time the user selects a new folder from the folders combo box. DialogEventFilter is called every time the user makes a new choice for the search pattern. As a result the current folder and all its children are searched for that specific pattern and the matching filenames are loaded into the content browser.</P>
+<P >class FilePickButtonListener is a helper object used to listen to the buttons we added to the dialog. The Apply/Ok/Cancel buttons are handled separately by the dialog window base class, we don't need to do anything on those. However for the buttons that we did add, inside the listener we do redirect the notifications to member functions inside the dialog.</P>
+<P >class FilePickSelectionListener is a helper object used to listen to the selection of an entry in the list of files. It has proxy semantics, all it does is to redirect the notifications to member functions inside the dialog.</P>
+<P >class MySimpleApp  is similar to "DemoApplication" in "DemoHello.cpp", see the description in that file.</P>
+<br><b></b>
+
+												</font></font>
+												<!-- End Main Text -->
+												<br></td>
+                  </table>
+                  </td>
+                </tr>
+            </table>
+            </td>
+          </tr>
+
+						<!-- bottom grey box -->
+            <td colspan="2">
+            <table border="0" cellpadding="0" cellspacing="0" bgcolor="#000000" width="100%">
+              <tbody>
+                  <td>
+                  <table border="0" cellpadding="0" cellspacing="1" width="100%">
+                    <tbody>
+                      <td align="center" bgcolor="#eeeeee"><br><font face="arial"><font size="1"><a href="../../../Documentation/open Modules Introduction.html">BACK</a><br><a href="http://www.opensprings.org">OpenSprings Website</a><br><a href="http://www.sourceforge.net/projects/opensprings">Sourceforge Project Page</a></font></font><br><img src="../../../Documentation/null.gif" width="2" height="20"></td>
+										</tbody>
+                  </table>
+                  </td>
+              </tbody>
+            </table>
+            </td>
+						</td>
+        </tbody>
+      </table>
+			</td>
+			
+<!--End Boxes -->
+      <td style="background-color: rgb(200, 200, 208);"><img src="../../../Documentation/null.gif" width="24"></td>
+      <td style="background-color: rgb(0, 0, 0);"><img src="../../../Documentation/null.gif" width="24"></td>
+
+
+</table>
+</body>
+</html>

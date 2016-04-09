@@ -1,0 +1,57 @@
+# GCC stuff
+# To know what GCCLIB is on your box : dirname `gcc -print-libgcc-file-name` 
+# gcc -print-search-dirs
+
+CC=gcc
+
+INCDIR=-I ../regexp \
+	   -I ../Sources \
+	   -I /usr/X11R6/include \
+	   -I /usr/X11R6/include/X11 
+
+#	   -I /usr/include 
+
+LIBDIR=-L/usr/lib \
+	   -L/usr/X11R6/lib
+
+INCFILE=-include ../Sources/Targets/TargetAPI_Darwin.h
+LIBFILE=-lgcc \
+		-lstdc++ \
+	    -lX11 
+
+CFLAGS=-O2
+# -Wall
+
+SRCFILES= \
+ ../Sources/Core/CoreModule.cpp \
+ ../Sources/Core/ErrorManagement.cpp \
+ ../Sources/Core/ErrorsToConsole.cpp \
+ ../Sources/Core/EventLoop.cpp \
+ ../Sources/Core/MainEntryPoint.cpp \
+ ../Sources/Core/MemoryMgr.cpp \
+ ../Sources/Core/Ref.cpp \
+ ../Sources/Core/RunTestChain.cpp \
+ ../Sources/Core/StringMessage.cpp \
+ ../Sources/Core/StringRegExp.cpp \
+ ../Sources/Core/TimeMgr.cpp \
+ ../Sources/Core/TimeMgr_Darwin.cpp \
+ ../Sources/Core/UnitTest.cpp \
+ ../Sources/Core/Version.cpp \
+ ../Sources/Core/Version_Darwin.cpp \
+ ../Sources/File/File.cpp \
+ ../Sources/File/File_Darwin.cpp \
+ ../Sources/File/FileTest.cpp \
+ ../Sources/DemoHello.cpp 
+
+# Build rules
+
+all: ExeDarwin.exe
+
+# $<
+ExeDarwin.exe: Makefile $(SRCFILES)
+	$(CC) $(CFLAGS) $(INCDIR) $(LIBDIR) $(INCFILE) -o $@ $(SRCFILES) $(LIBFILE)
+	strip -S -x $@
+	
+clean:
+	rm -f *.so *.o *~ *.swp
+

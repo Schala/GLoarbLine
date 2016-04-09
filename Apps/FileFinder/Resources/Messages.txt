@@ -1,0 +1,445 @@
+ {       1, "File directory full"}
+,{       2, "Disk or volume full"}
+,{       3, "Volume not found"}
+,{       4, "I/O error."}
+,{       5, "Bad filename or volume name"}
+,{       6, "File not open."}
+,{       7, "Logical end-of-file reached."}
+,{       8, "Attempt to position mark before the start of the file."}
+,{       9, "Memory full (open) or file won't fit (load)"}
+,{      10, "Too many files open"}
+,{      11, "File or directory not found; incomplete pathname"}
+,{      12, "Volume is locked through hardware"}
+,{      13, "File is locked. "}
+,{      14, "Volume is locked through software"}
+,{      15, "One or more files are open, File is busy, Directory is not empty."}
+,{      16, "Duplicate filename and version, Destination file already exists, File found instead of folder"}
+,{      17, "File already open for writing"}
+,{      18, "Volume is offline"}
+,{      19, "Attempt to open locked file for writing"}
+,{      20, "Volume already online"}
+,{      21, "No such drive"}
+,{      22, "Not a Macintosh disk"}
+,{      23, "Volume belongs to an external file system"}
+,{      24, "Problem during rename"}
+,{      25, "Bad master directory block"}
+,{      26, "Read/ write permission doesn’t allow writing."}
+,{      27, "Drive not installed"}
+,{      28, "Directory not found or incomplete pathname"}
+,{      29, "Too many working directories open"}
+,{      30, "Attempt to move"}
+,{      31, "Volume does not support Desktop Manager"}
+,{      32, "Server volume has been disconnected"}
+,{      33, "Foreign File system does not exist"}
+,{      34, "File system is busy, cannot be removed"}
+,{      35, "Name length not 1 <= length <= 31"}
+,{      36, "FSD size incompatible with current FSM vers"}
+,{      37, "FSID already exists on InstallFS"}
+,{      38, "FSM version incompatible with FSD"}
+,{      39, "no alternate stack for HFS CI"}
+,{      40, "disk driver's hardware was disconnected"}
+,{      41, "File ID not found"}
+,{      42, "File ID already exists"}
+,{      43, "Specified file is a directory"}
+,{      44, "Files on different volumes"}
+,{      45, "Catalog has changed and catalog position record may be invalid"}
+,{      46, "Can’t exchange a file with itself"}
+,{      47, "File ID is dangling or doesn’t match with the file number"}
+,{      48, "Mount allows only remounts and doesn’t get one"}
+,{      49, "File’s EOF, offset, mark or size is too big"}
+,{      50, "File or volume is too big for system"}
+,{      51, "Can’t eject because volume is in use by VM"}
+,{      52, "A supplied fork name was invalid "}
+,{      53, "A file or fork name was too long. This means that the given name could never exist; this is different from a “file not found” or errFSForkNotFound error."}
+,{      54, "An attempt to create a fork, but that fork already exists."}
+,{      55, "User does not have the correct access to the file, Directory cannot be shared"}
+,{      56, "User authentication method is unknown"}
+,{      57, "Workstation is using an AFP version that the server doesn’t recognize"}
+,{      58, "Bitmap contained bits undefined for call"}
+,{      59, "Move destination is offspring of source or root was specified"}
+,{      60, "Requested user permission not possible"}
+,{      61, "Cannot delete non-empty directory"}
+,{      62, "Insufficient free space on volume for operation"}
+,{      63, "Read beyond logical end-of-file"}
+,{      64, "Cannot delete an open file"}
+,{      65, "Cannot create directory on specified volume"}
+,{      66, "Unknown user name/ user ID or missing comment / APPL entry"}
+,{      67, "Some or all of requested range is locked by another user"}
+,{      68, "No more ranges can be locked"}
+,{      69, "Server is not responding"}
+,{      70, "Specified destination file or directory already exists"}
+,{      71, "Specified file or directory does not exist"}
+,{      72, "A specified parameter was out of allowable range"}
+,{      73, "Specified range was not locked"}
+,{      74, "Part of range is already locked"}
+,{      75, "Session closed"}
+,{      76, "User authentication failed (usually, password is not correct)"}
+,{      77, "A directory exists with that name, Directory not found, Folder locking not supported by volume, Object was a file, not a directory"}
+,{      78, "Maximum open file coun reached"}
+,{      79, "Server is shutting down"}
+,{      80, "AFPRename cannot rename volume"}
+,{      81, "Unknown directory specified"}
+,{      82, "Icon size specified is different from existing icon size"}
+,{      83, "Volume is read-only"}
+,{      84, "Object is M/R/D/W inhibited"}
+,{      85, "The directory contains a share point"}
+,{      86, "File ID not found"}
+,{      87, "File ID already exists"}
+,{      88, "Catalog has changed and search cannot be resumed"}
+,{      89, "Source and destination files are the same"}
+,{      90, "File ID not found"}
+,{      91, "Someone tried to change their password to the same password on a mandatory password change"}
+,{      92, "The password being set is too short: there is a minimum length that must be met or exceeded"}
+,{      93, "Password has expired on server"}
+,{      94, "The directory is inside a shared directory"}
+,{      95, "The folder being shared is inside the trash folder OR the shared folder is being moved into the trash folder"}
+,{      96, "The password needs to be changed"}
+,{      97, "Password does not conform to server’s password policy"}
+,{      98, "User has been authenticated but is already logged in from another machine (and that's not allowed on this server)"}
+,{      99, "Not a fixed directory ID volume"}
+,{     100, "Maximum number of volumes has been mounted"}
+,{     101, "Volume already mounted"}
+,{     102, "Attempt to log on to a server running on the same machine"}
+,{     103, "OS filesystem error ($2;) while accessing file '$1;'"}
+,{     104, "The wrong diskette is in the drive."}
+,{     105, "Operation not permitted"}
+,{     106, "No such file or directory"}
+,{     107, "No such process"}
+,{     108, "Interrupted system call"}
+,{     109, "Input/output error"}
+,{     110, "Device not configured"}
+,{     111, "Argument list too long"}
+,{     112, "Exec format error"}
+,{     113, "Bad file descriptor"}
+,{     114, "No child processes"}
+,{     115, "Resource deadlock avoided"}
+,{     116, "Cannot allocate memory"}
+,{     117, "Permission denied"}
+,{     118, "Bad address"}
+,{     119, "Device busy"}
+,{     120, "File exists"}
+,{     121, "Cross-device link"}
+,{     122, "Operation not supported by device"}
+,{     123, "Not a directory"}
+,{     124, "Is a directory"}
+,{     125, "Invalid argument"}
+,{     126, "Too many open files in system"}
+,{     127, "Too many open files"}
+,{     128, "Inappropriate ioctl for device"}
+,{     129, "Text file busy"}
+,{     130, "File too large"}
+,{     131, "No space left on device"}
+,{     132, "Illegal seek"}
+,{     133, "Read-only file system"}
+,{     134, "Too many links"}
+,{     135, "Broken pipe"}
+,{     136, "Resource temporarily unavailable, operation would block, try again later"}
+,{     137, "Operation now in progress"}
+,{     138, "Operation already in progress"}
+,{     139, "Socket operation on non-socket"}
+,{     140, "Destination address required"}
+,{     141, "Message too long"}
+,{     142, "Protocol wrong type for socket"}
+,{     143, "Protocol not available"}
+,{     144, "Protocol not supported"}
+,{     145, "Socket type not supported"}
+,{     146, "Operation not supported"}
+,{     147, "Protocol family not supported"}
+,{     148, "Address family not supported by protocol family"}
+,{     149, "Address already in use"}
+,{     150, "Can't assign requested address"}
+,{     151, "Network is down"}
+,{     152, "Network is unreachable"}
+,{     153, "Network dropped connection on reset"}
+,{     154, "Software caused connection abort"}
+,{     155, "Connection reset by peer"}
+,{     156, "No buffer space available"}
+,{     157, "Socket is already connected"}
+,{     158, "Socket is not connected"}
+,{     159, "Can't send after socket shutdown"}
+,{     160, "Too many references: can't splice"}
+,{     161, "Operation timed out"}
+,{     162, "Connection refused"}
+,{     163, "Too many levels of symbolic links"}
+,{     164, "File name too long"}
+,{     165, "Host is down"}
+,{     166, "No route to host"}
+,{     167, "Directory not empty"}
+,{     168, "Too many users"}
+,{     169, "Disc quota exceeded"}
+,{     170, "No locks available"}
+,{     171, "Function not implemented"}
+,{     172, "Value too large to be stored in data type"}
+,{     173, "Operation canceled"}
+,{     174, "OS filesystem error ($2;) while accessing file '$1;'"}
+,{     175, "Incorrect function."}
+,{     176, "The system cannot find the file '$1;'."}
+,{     177, "The system cannot find the path '$1;'."}
+,{     178, "Too many opened files, the system cannot open the file '$1;'."}
+,{     179, "Access is denied to file'$1;'."}
+,{     180, "The handle is invalid."}
+,{     181, "The storage control blocks were destroyed."}
+,{     182, "Not enough storage is available to process this command."}
+,{     183, "The storage control block address is invalid."}
+,{     184, "The environment is incorrect."}
+,{     185, "An attempt was made to load a program with an incorrect format."}
+,{     186, "The access code is invalid."}
+,{     187, "The data is invalid."}
+,{     188, "Not enough storage is available to complete this operation."}
+,{     189, "The system cannot find the drive specified."}
+,{     190, "The directory cannot be removed."}
+,{     191, "The system cannot move the file to a different disk drive."}
+,{     192, "There are no more files."}
+,{     193, "The media is write protected."}
+,{     194, "The system cannot find the device specified."}
+,{     195, "The device is not ready."}
+,{     196, "The device does not recognize the command."}
+,{     197, "Data error (cyclic redundancy check)."}
+,{     198, "The program issued a command but the command length is incorrect."}
+,{     199, "The drive cannot locate a specific area or track on the disk."}
+,{     200, "The specified disk or diskette cannot be accessed."}
+,{     201, "The drive cannot find the sector requested."}
+,{     202, "The printer is out of paper."}
+,{     203, "The system cannot write to the specified device."}
+,{     204, "The system cannot read from the specified device."}
+,{     205, "A device attached to the system is not functioning."}
+,{     206, "The process cannot access the file because it is being used by another process."}
+,{     207, "The process cannot access the file because another process has locked a portion of the file."}
+,{     208, "Too many files opened for sharing."}
+,{     209, "Reached the end of the file."}
+,{     210, "The disk is full."}
+,{     211, "The request is not supported."}
+,{     212, "Windows cannot find the network path. Verify that the network path is correct and the destination computer is not busy or turned off. If Windows still cannot find the network path, contact your network administrator."}
+,{     213, "You were not connected because a duplicate name exists on the network. Go to System in the Control Panel to change the computer name and try again."}
+,{     214, "The network path was not found."}
+,{     215, "The network is busy."}
+,{     216, "The specified network resource or device is no longer available."}
+,{     217, "The network BIOS command limit has been reached."}
+,{     218, "A network adapter hardware error occurred."}
+,{     219, "The specified server cannot perform the requested operation."}
+,{     220, "An unexpected network error occurred."}
+,{     221, "The remote adapter is not compatible."}
+,{     222, "The printer queue is full."}
+,{     223, "Space to store the file waiting to be printed is not available on the server."}
+,{     224, "Your file waiting to be printed was deleted."}
+,{     225, "The specified network name is no longer available."}
+,{     226, "Network access is denied."}
+,{     227, "The network resource type is not correct."}
+,{     228, "The network name cannot be found."}
+,{     229, "The name limit for the local computer network adapter card was exceeded."}
+,{     230, "The network BIOS session limit was exceeded."}
+,{     231, "The remote server has been paused or is in the process of being started."}
+,{     232, "No more connections can be made to this remote computer at this time because there are already as many connections as the computer can accept."}
+,{     233, "The specified printer or disk device has been paused."}
+,{     234, "The file exists."}
+,{     235, "The directory or file cannot be created."}
+,{     236, "Fail on INT 24."}
+,{     237, "Storage to process this request is not available."}
+,{     238, "The local device name is already in use."}
+,{     239, "The specified network password is not correct."}
+,{     240, "The parameter is incorrect."}
+,{     241, "A write fault occurred on the network."}
+,{     242, "The system cannot start another process at this time."}
+,{     243, "Cannot create another system semaphore."}
+,{     244, "The exclusive semaphore is owned by another process."}
+,{     245, "The semaphore is set and cannot be closed."}
+,{     246, "The semaphore cannot be set again."}
+,{     247, "Cannot request exclusive semaphores at interrupt time."}
+,{     248, "The previous ownership of this semaphore has ended."}
+,{     249, "Insert the diskette for drive %1."}
+,{     250, "The program stopped because an alternate diskette was not inserted."}
+,{     251, "The disk is in use or locked by another process."}
+,{     252, "The pipe has been ended."}
+,{     253, "The system cannot open the device or file specified."}
+,{     254, "The file name is too long."}
+,{     255, "There is not enough space on the disk."}
+,{     256, "No more internal file identifiers available."}
+,{     257, "The target internal file identifier is incorrect."}
+,{     258, "The IOCTL call made by the application program is not correct."}
+,{     259, "The verify-on-write switch parameter value is not correct."}
+,{     260, "The system does not support the command requested."}
+,{     261, "This function is not supported on this system."}
+,{     262, "The semaphore timeout period has expired."}
+,{     263, "The data area passed to a system call is too small."}
+,{     264, "The filename, directory name, or volume label syntax is incorrect."}
+,{     265, "The system call level is not correct."}
+,{     266, "The disk has no volume label."}
+,{     267, "The specified module could not be found."}
+,{     268, "The specified procedure could not be found."}
+,{     269, "There are no child processes to wait for."}
+,{     270, "The %1 application cannot be run in Win32 mode."}
+,{     271, "Operation not permitted"}
+,{     272, "No such file or directory"}
+,{     273, "No such process"}
+,{     274, "Interrupted system call"}
+,{     275, "Input/output error"}
+,{     276, "Device not configured"}
+,{     277, "Argument list too long"}
+,{     278, "Exec format error"}
+,{     279, "Bad file descriptor"}
+,{     280, "No child processes"}
+,{     281, "Resource deadlock avoided"}
+,{     282, "Cannot allocate memory"}
+,{     283, "Permission denied"}
+,{     284, "Bad address"}
+,{     285, "Device busy"}
+,{     286, "File exists"}
+,{     287, "Cross-device link"}
+,{     288, "Operation not supported by device"}
+,{     289, "Not a directory"}
+,{     290, "Is a directory"}
+,{     291, "Invalid argument"}
+,{     292, "Too many open files in system"}
+,{     293, "Too many open files"}
+,{     294, "Inappropriate ioctl for device"}
+,{     295, "Text file busy"}
+,{     296, "File too large"}
+,{     297, "No space left on device"}
+,{     298, "Illegal seek"}
+,{     299, "Read-only file system"}
+,{     300, "Too many links"}
+,{     301, "Broken pipe"}
+,{     302, "Resource temporarily unavailable, operation would block, try again later"}
+,{     303, "Operation now in progress"}
+,{     304, "Operation already in progress"}
+,{     305, "Socket operation on non-socket"}
+,{     306, "Destination address required"}
+,{     307, "Message too long"}
+,{     308, "Protocol wrong type for socket"}
+,{     309, "Protocol not available"}
+,{     310, "Protocol not supported"}
+,{     311, "Socket type not supported"}
+,{     312, "Operation not supported"}
+,{     313, "Protocol family not supported"}
+,{     314, "Address family not supported by protocol family"}
+,{     315, "Address already in use"}
+,{     316, "Can't assign requested address"}
+,{     317, "Network is down"}
+,{     318, "Network is unreachable"}
+,{     319, "Network dropped connection on reset"}
+,{     320, "Software caused connection abort"}
+,{     321, "Connection reset by peer"}
+,{     322, "No buffer space available"}
+,{     323, "Socket is already connected"}
+,{     324, "Socket is not connected"}
+,{     325, "Can't send after socket shutdown"}
+,{     326, "Too many references: can't splice"}
+,{     327, "Operation timed out"}
+,{     328, "Connection refused"}
+,{     329, "Too many levels of symbolic links"}
+,{     330, "File name too long"}
+,{     331, "Host is down"}
+,{     332, "No route to host"}
+,{     333, "Directory not empty"}
+,{     334, "Too many users"}
+,{     335, "Disc quota exceeded"}
+,{     336, "No locks available"}
+,{     337, "Function not implemented"}
+,{     338, "Value too large to be stored in data type"}
+,{     339, "Operation canceled"}
+,{     340, "OS filesystem error ($2;) while accessing file '$1;'"}
+,{     341, "Attempt to use a file handle to an open disk partition for an operation other than raw disk I/O."}
+,{     342, "Assertion failure in '$2;', quote '$1;'"}
+,{     343, "Assertion failure in '$2;', unexpected internal failure"}
+,{     344, "An attempt was made to move the file pointer before the beginning of the file."}
+,{     345, "The file pointer cannot be set on the specified device or file."}
+,{     346, "A JOIN or SUBST command cannot be used for a drive that contains previously joined drives."}
+,{     347, "An attempt was made to use a JOIN or SUBST command on a drive that has already been joined."}
+,{     348, "An attempt was made to use a JOIN or SUBST command on a drive that has already been substituted."}
+,{     349, "The system tried to delete the JOIN of a drive that is not joined."}
+,{     350, "The system tried to delete the substitution of a drive that is not substituted."}
+,{     351, "The system tried to join a drive to a directory on a joined drive."}
+,{     352, "The system tried to substitute a drive to a directory on a substituted drive."}
+,{     353, "The system tried to join a drive to a directory on a substituted drive."}
+,{     354, "The system tried to SUBST a drive to a directory on a joined drive."}
+,{     355, "The system cannot perform a JOIN or SUBST at this time."}
+,{     356, "The system cannot join or substitute a drive to or for a directory on the same drive."}
+,{     357, "The directory is not a subdirectory of the root directory."}
+,{     358, "The directory is not empty."}
+,{     359, "The path specified is being used in a substitute."}
+,{     360, "Not enough resources are available to process this command."}
+,{     361, "The path specified cannot be used at this time."}
+,{     362, "An attempt was made to join or substitute a drive for which a directory on the drive is the target of a previous substitute."}
+,{     363, "System trace information was not specified in your CONFIG.SYS file, or tracing is disallowed."}
+,{     364, "The number of specified semaphore events for DosMuxSemWait is not correct."}
+,{     365, "DosMuxSemWait did not execute; too many semaphores are already set."}
+,{     366, "The DosMuxSemWait list is not correct."}
+,{     367, "The volume label you entered exceeds the label character limit of the target file system."}
+,{     368, "Cannot create another thread."}
+,{     369, "The recipient process has refused the signal."}
+,{     370, "The segment is already discarded and cannot be locked."}
+,{     371, "The segment is already unlocked."}
+,{     372, "The address for the thread ID is not correct."}
+,{     373, "The argument string passed to DosExecPgm is not correct."}
+,{     374, "The specified path is invalid."}
+,{     375, "A signal is already pending."}
+,{     376, "No more threads can be created in the system."}
+,{     377, "Unable to lock a region of a file."}
+,{     378, "The requested resource is in use."}
+,{     379, "A lock request was not outstanding for the supplied cancel region."}
+,{     380, "The file system does not support atomic changes to the lock type."}
+,{     381, "The system detected a segment number that was not correct."}
+,{     382, "The operating system cannot run %1."}
+,{     383, "Cannot create a file when that file already exists."}
+,{     384, "The flag passed is not correct."}
+,{     385, "The specified system semaphore name was not found."}
+,{     386, "The operating system cannot run %1."}
+,{     387, "The operating system cannot run %1."}
+,{     388, "The operating system cannot run %1."}
+,{     389, "Cannot run %1 in Win32 mode."}
+,{     390, "The operating system cannot run %1."}
+,{     391, "%1 is not a valid Win32 application."}
+,{     392, "The operating system cannot run %1."}
+,{     393, "The operating system cannot run %1."}
+,{     394, "The operating system cannot run this application program."}
+,{     395, "The operating system is not presently configured to run this application."}
+,{     396, "The operating system cannot run %1."}
+,{     397, "The operating system cannot run this application program."}
+,{     398, "The code segment cannot be greater than or equal to 64K."}
+,{     399, "The operating system cannot run %1."}
+,{     400, "The operating system cannot run %1."}
+,{     401, "The system could not find the environment option that was entered."}
+,{     402, "No process in the command subtree has a signal handler."}
+,{     403, "The filename or extension is too long."}
+,{     404, "The ring 2 stack is in use."}
+,{     405, "The global filename characters, * or ?, are entered incorrectly or too many global filename characters are specified."}
+,{     406, "The signal being posted is not correct."}
+,{     407, "The signal handler cannot be set."}
+,{     408, "The segment is locked and cannot be reallocated."}
+,{     409, "Too many dynamic-link modules are attached to this program or dynamic-link module."}
+,{     410, "Cannot nest calls to LoadModule."}
+,{     411, "The image file %1 is valid, but is for a machine type other than the current machine."}
+,{     412, "The pipe state is invalid."}
+,{     413, "All pipe instances are busy."}
+,{     414, "The pipe is being closed."}
+,{     415, "No process is on the other end of the pipe."}
+,{     416, "More data is available."}
+,{     417, "The session was canceled."}
+,{     418, "The specified extended attribute name was invalid."}
+,{     419, "The extended attributes are inconsistent."}
+,{     420, "The wait operation timed out."}
+,{     421, "No more data is available."}
+,{     422, "The copy functions cannot be used."}
+,{     423, "The directory name is invalid."}
+,{     424, "The extended attributes did not fit in the buffer."}
+,{     425, "The extended attribute file on the mounted file system is corrupt."}
+,{     426, "The extended attribute table file is full."}
+,{     427, "The specified extended attribute handle is invalid."}
+,{     428, "The mounted file system does not support extended attributes."}
+,{     429, "Attempt to release mutex not owned by caller."}
+,{     430, "Too many posts were made to a semaphore."}
+,{     431, "Only part of a ReadProcessMemory or WriteProcessMemory request was completed."}
+,{     432, "The oplock request is denied."}
+,{     433, "An invalid oplock acknowledgment was received by the system."}
+,{     434, "The system cannot find message text for message number 0x%1 in the message file for %2."}
+,{     435, "Attempt to access invalid address."}
+,{     436, "Arithmetic result exceeded 32 bits."}
+,{     437, "There is a process on other end of the pipe."}
+,{     438, "Waiting for a process to open the other end of the pipe."}
+,{     439, "Access to the extended attribute was denied."}
+,{     440, "The I/O operation has been aborted because of either a thread exit or an application request."}
+,{     441, "Overlapped I/O event is not in a signaled state."}
+,{     442, "Overlapped I/O operation is in progress."}
+,{     443, "Invalid access to memory location."}
+,{     444, "Error performing inpage operation."}
+,{     445, "OS filesystem error ($2;) while accessing file '$1;'"}

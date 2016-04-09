@@ -1,0 +1,59 @@
+# GCC stuff
+# To know what GCCLIB is on your box : dirname `gcc -print-libgcc-file-name` 
+# gcc -print-search-dirs
+
+CC=gcc
+
+INCDIR=-I ../regexp \
+       -I ../Sources \
+       -I /usr/include \
+       -I /usr/include.bak/g++-3 \
+       -I /usr/X11R6/include \
+       -I /usr/X11R6/include/X11 
+
+#	   -I /usr/include 
+
+LIBDIR=-L/usr/lib \
+       -L/usr/X11R6/lib
+
+INCFILE=-include ../Sources/Targets/TargetAPI_Linux.h
+LIBFILE=-lgcc \
+	-lstdc++ \
+	-lX11 
+
+CFLAGS=-O2
+#CFLAGS=-g -DDEBUG=1
+# -Wall
+
+SRCFILES= \
+ ../Sources/Core/CoreModule.cpp \
+ ../Sources/Core/ErrorManagement.cpp \
+ ../Sources/Core/ErrorsToConsole.cpp \
+ ../Sources/Core/EventLoop.cpp \
+ ../Sources/Core/MainEntryPoint.cpp \
+ ../Sources/Core/MemoryMgr.cpp \
+ ../Sources/Core/Ref.cpp \
+ ../Sources/Core/RunTestChain.cpp \
+ ../Sources/Core/StringMessage.cpp \
+ ../Sources/Core/StringRegExp.cpp \
+ ../Sources/Core/TimeMgr.cpp \
+ ../Sources/Core/TimeMgr_Linux.cpp \
+ ../Sources/Core/UnitTest.cpp \
+ ../Sources/Core/Version.cpp \
+ ../Sources/Core/Version_Linux.cpp \
+ ../Sources/File/File.cpp \
+ ../Sources/File/File_Linux.cpp \
+ ../Sources/File/FileTest.cpp \
+ ../Sources/DemoHello.cpp 
+
+# Build rules
+
+all: ExeLinux.exe
+
+# $<
+ExeLinux.exe: Makefile.gcc $(SRCFILES)
+	$(CC) $(CFLAGS) $(INCDIR) $(LIBDIR) $(INCFILE) -o $@ $(SRCFILES) $(LIBFILE)
+	
+clean:
+	rm -f *.so *.o *~ *.swp
+

@@ -1,1 +1,117 @@
-#include "Resource.h"LANGUAGE 0x09, 0x01#pragma code_page(1252)IDI_MDIICON 	ICON 	DISCARDABLE		"19Hotline.ico"IDI_APPICON		ICON	DISCARDABLE		"19Hotline.ico"IDI_DOCICON		ICON	DISCARDABLE		"hotlinedoc.ico"IDI_PFICON		ICON	DISCARDABLE		"hotlinepf.ico"//210		ICON    DISCARDABLE     "hotline.ico"//238		ICON	DISCARDABLE		"chat.ico"//401		ICON	DISCARDABLE		"folder.ico"//413		ICON	DISCARDABLE		"newscat.ico"//416		ICON	DISCARDABLE		"tasks.ico"//233		ICON	DISCARDABLE		"servers.ico"//414		ICON	DISCARDABLE		"user.ico"//215		ICON	DISCARDABLE		"info.ico"//417		ICON	DISCARDABLE		"preview.ICO"//237		ICON	DISCARDABLE		"onlineusers.ico"//232		ICON	DISCARDABLE		"trackers.ico"//415		ICON	DISCARDABLE		"privchat.ico"//231		ICON	DISCARDABLE		"newsbundle.ico"//206		ICON	DISCARDABLE		"privmsg.ico"//223		ICON	DISCARDABLE		"newsart.ICO"16  	CURSOR  DISCARDABLE     "handpoint.cur"17  	CURSOR  DISCARDABLE     "sizebarh.cur"18      CURSOR  DISCARDABLE     "sizebarv.cur"MDIMenu MENU{	POPUP "File"	{		MENUITEM "Quit",						101	}	POPUP "Edit"	{		MENUITEM "Undo\tCtrl+Z",				201		MENUITEM SEPARATOR		MENUITEM "Cut\tCtrl+X",					203		MENUITEM "Copy\tCtrl+C",				204		MENUITEM "Paste\tCtrl+V",				205		MENUITEM "Clear",						206		MENUITEM SEPARATOR		MENUITEM "Select All\tCtrl+A",			208	}	POPUP "GLoarbLine"	{		MENUITEM "Connect\tCtrl+K",				301		MENUITEM "Disconnect",					302		MENUITEM SEPARATOR		MENUITEM "Show News\tCtrl+N",			304		MENUITEM "Show Online Users\tCtrl+U",	305		MENUITEM "Show Files\tCtrl+F",			306		MENUITEM "Show Chat\tCtrl+H",			307		MENUITEM "Show Tasks\tCtrl+T",			308		MENUITEM "Show Tracker\tCtrl+R",		309		MENUITEM "Show Toolbar\tCtrl+B",		310		MENUITEM "Post News...\tCtrl+P",		311		MENUITEM SEPARATOR		MENUITEM "New User\tCtrl+M",			313		MENUITEM "Open User...\tCtrl+O",		314		MENUITEM SEPARATOR		MENUITEM "Options...",					316		MENUITEM "About GLoarbLine...",			317	}	//POPUP "Window"	//{	//	MENUITEM SEPARATOR	//}}STRINGTABLE DISCARDABLE{	4096,	"GLoarbLine"}1 VERSIONINFO FILEVERSION 1,9,7,2 PRODUCTVERSION 1,9,7,2 FILEFLAGSMASK 0x3fL#ifdef _DEBUG FILEFLAGS 0x1L#else FILEFLAGS 0x0L#endif FILEOS 0x4L FILETYPE 0x1L FILESUBTYPE 0x0LBEGIN    BLOCK "StringFileInfo"    BEGIN        BLOCK "040904b0"        BEGIN            VALUE "Comments", "\0"            VALUE "CompanyName", "www.lorbac.net\0"            VALUE "FileDescription", "GLoarbLine Connect Client\0"            VALUE "FileVersion", "1.9.7.2\0"            VALUE "InternalName", "GLoarbLine.exe\0"            VALUE "LegalCopyright", "© GLoarb!! Inc. 2007\0"            VALUE "LegalTrademarks", "\0"            VALUE "OriginalFilename", "GLoarbLine.exe\0"            VALUE "PrivateBuild", "\0"            VALUE "ProductName", "GLoarbLine Connect Client\0"            VALUE "ProductVersion", "1.9.7.2\0"            VALUE "SpecialBuild", "\0"        END    END    BLOCK "VarFileInfo"    BEGIN        VALUE "Translation", 0x409, 1200    ENDEND
+
+#include "Resource.h"
+
+LANGUAGE 0x09, 0x01
+#pragma code_page(1252)
+
+IDI_MDIICON 	ICON 	DISCARDABLE		"19Hotline.ico"
+IDI_APPICON		ICON	DISCARDABLE		"19Hotline.ico"
+IDI_DOCICON		ICON	DISCARDABLE		"hotlinedoc.ico"
+IDI_PFICON		ICON	DISCARDABLE		"hotlinepf.ico"
+
+//210		ICON    DISCARDABLE     "hotline.ico"
+//238		ICON	DISCARDABLE		"chat.ico"
+//401		ICON	DISCARDABLE		"folder.ico"
+//413		ICON	DISCARDABLE		"newscat.ico"
+//416		ICON	DISCARDABLE		"tasks.ico"
+//233		ICON	DISCARDABLE		"servers.ico"
+//414		ICON	DISCARDABLE		"user.ico"
+//215		ICON	DISCARDABLE		"info.ico"
+//417		ICON	DISCARDABLE		"preview.ICO"
+//237		ICON	DISCARDABLE		"onlineusers.ico"
+//232		ICON	DISCARDABLE		"trackers.ico"
+//415		ICON	DISCARDABLE		"privchat.ico"
+//231		ICON	DISCARDABLE		"newsbundle.ico"
+//206		ICON	DISCARDABLE		"privmsg.ico"
+//223		ICON	DISCARDABLE		"newsart.ICO"
+
+16  	CURSOR  DISCARDABLE     "handpoint.cur"
+17  	CURSOR  DISCARDABLE     "sizebarh.cur"
+18      CURSOR  DISCARDABLE     "sizebarv.cur"
+
+
+MDIMenu MENU
+{
+	POPUP "File"
+	{
+		MENUITEM "Quit",						101
+	}
+	POPUP "Edit"
+	{
+		MENUITEM "Undo\tCtrl+Z",				201
+		MENUITEM SEPARATOR
+		MENUITEM "Cut\tCtrl+X",					203
+		MENUITEM "Copy\tCtrl+C",				204
+		MENUITEM "Paste\tCtrl+V",				205
+		MENUITEM "Clear",						206
+		MENUITEM SEPARATOR
+		MENUITEM "Select All\tCtrl+A",			208
+	}
+	POPUP "GLoarbLine"
+	{
+		MENUITEM "Connect\tCtrl+K",				301
+		MENUITEM "Disconnect",					302
+		MENUITEM SEPARATOR
+		MENUITEM "Show News\tCtrl+N",			304
+		MENUITEM "Show Online Users\tCtrl+U",	305
+		MENUITEM "Show Files\tCtrl+F",			306
+		MENUITEM "Show Chat\tCtrl+H",			307
+		MENUITEM "Show Tasks\tCtrl+T",			308
+		MENUITEM "Show Tracker\tCtrl+R",		309
+		MENUITEM "Show Toolbar\tCtrl+B",		310
+		MENUITEM "Post News...\tCtrl+P",		311
+		MENUITEM SEPARATOR
+		MENUITEM "New User\tCtrl+M",			313
+		MENUITEM "Open User...\tCtrl+O",		314
+		MENUITEM SEPARATOR
+		MENUITEM "Options...",					316
+		MENUITEM "About GLoarbLine...",			317
+	}
+	//POPUP "Window"
+	//{
+	//	MENUITEM SEPARATOR
+	//}
+}
+
+
+STRINGTABLE DISCARDABLE
+{
+	4096,	"GLoarbLine"
+}
+
+1 VERSIONINFO
+ FILEVERSION 1,9,7,2
+ PRODUCTVERSION 1,9,7,2
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "www.lorbac.net\0"
+            VALUE "FileDescription", "GLoarbLine Connect Client\0"
+            VALUE "FileVersion", "1.9.7.2\0"
+            VALUE "InternalName", "GLoarbLine.exe\0"
+            VALUE "LegalCopyright", "© GLoarb!! Inc. 2007\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "GLoarbLine.exe\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "GLoarbLine Connect Client\0"
+            VALUE "ProductVersion", "1.9.7.2\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
